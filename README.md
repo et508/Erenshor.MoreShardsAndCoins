@@ -3,7 +3,7 @@ Configure the drop chance of Planar Stone Shards and Sivakrux.
 
 ## Installation
 - Install [BepInEx Mod Pack](https://thunderstore.io/package/bbepis/BepInExPack/)
-- Download the latest release from [GitHub](https://github.com/et508/Erenshor.MoreShardsAndCoins) or [Thunderstore]()
+- Download the latest [release](https://github.com/et508/Erenshor.MoreShardsAndCoins/releases) 
 - Extract files from Erenshor.MoreShardsAndCoins.zip into Erenshor\BepInEx\plugins\ folder.
 
 ## Changing Drop Rates
@@ -14,4 +14,4 @@ Configure the drop chance of Planar Stone Shards and Sivakrux.
 
 ## Erenshor LootTables
 - Erenshor pre loads the loot table for every NPC when the scene loads.
-- Therefore changes to drop rates will only apply to newly spawned enemies. Reload the scene for any new config changes to take effect.
+- If changing drop chance using a ingame config manager, changes to drop rates will only apply to newly spawned enemies. Reload the scene or wait for new respawns for changes to apply.
