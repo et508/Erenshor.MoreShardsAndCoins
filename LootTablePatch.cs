@@ -9,35 +9,24 @@ public class LootTable_InitLootTable_Patch
     static void Postfix(LootTable __instance)
     {
         var stats = __instance.GetComponent<Stats>();
-        if (stats == null)
-        {
-            Debug.LogWarning("[MoreShardsAndCoins] No Stats component found on LootTable.");
+        if (stats == null || stats.Level < 15)
             return;
-        }
-
-        Debug.Log($"[MoreShardsAndCoins] Enemy Level: {stats.Level}");
-
-        if (stats.Level < 15)
-        {
-            Debug.Log("[MoreShardsAndCoins] Skipping loot — enemy is below level 15.");
-            return;
-        }
 
         float planarChance = Plugin.GetNormalizedChance(Plugin.PlanarShardDropChancePercent);
         float sivakChance = Plugin.GetNormalizedChance(Plugin.SivakruxDropChancePercent);
 
-        if (Random.value < planarChance)
+        // Add Planar Shard
+        if (!__instance.ActualDrops.Contains(GameData.GM.PlanarShard) && Random.value < planarChance)
         {
             __instance.ActualDrops.Add(GameData.GM.PlanarShard);
             __instance.special = true;
-            Debug.Log("[MoreShardsAndCoins] Added Planar Shard to drop.");
         }
 
-        if (Random.value < sivakChance)
+        // Add Sivakrux
+        if (!__instance.ActualDrops.Contains(GameData.GM.Sivak) && Random.value < sivakChance)
         {
             __instance.ActualDrops.Add(GameData.GM.Sivak);
             __instance.special = true;
-            Debug.Log("[MoreShardsAndCoins] Added Sivakrux to drop.");
         }
     }
 }
