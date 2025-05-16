@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MoreShardsAndCoins;
 
-[BepInPlugin("et508.erenshor.moreshardsandcoins", "More Shards and Coins", "1.0.0")]
+[BepInPlugin("et508.erenshor.moreshardsandcoins", "More Shards and Coins", "1.0.1")]
 public class Plugin : BaseUnityPlugin
 {
     public static ConfigEntry<float> PlanarShardDropChancePercent;
@@ -25,9 +25,9 @@ public class Plugin : BaseUnityPlugin
         SivakruxDropChancePercent = Config.Bind(
             "Drop Chance",
             "SivakruxDropChancePercent",
-            0.2f, // Default: 0.2%
+            0.1f, // Default: 0.1%
             new ConfigDescription(
-                "Chance to drop Sivakrux (0.0–100.0%). Default: 0.2. Reload scene or wait for new respawns for changes to apply.",
+                "Chance to drop Sivakrux (0.0–100.0%). Default: 0.1. Reload scene or wait for new respawns for changes to apply.",
                 new AcceptableValueRange<float>(0f, 100f)
             ));
 
