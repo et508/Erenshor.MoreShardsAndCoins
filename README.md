@@ -2,7 +2,7 @@
 Configure the drop chance of Planar Stone Shards and Sivakrux.
 
 ## Installation
-- Install [BepInEx Mod Pack](https://thunderstore.io/package/bbepis/BepInExPack/)
+- Install [BepInEx Mod Pack](https://thunderstore.io/c/erenshor/p/BepInEx/BepInExPack/)
 - Download the latest [release](https://github.com/et508/Erenshor.MoreShardsAndCoins/releases) 
 - Extract files from Erenshor.MoreShardsAndCoins.zip into Erenshor\BepInEx\plugins\ folder.
 
