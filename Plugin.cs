@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MoreShardsAndCoins;
 
-[BepInPlugin("et508.erenshor.moreshardsandcoins", "More Shards and Coins", "1.0.1")]
+[BepInPlugin("et508.erenshor.moreshardsandcoins", "More Shards and Coins", "1.0.2")]
 public class Plugin : BaseUnityPlugin
 {
     public static ConfigEntry<float> PlanarShardDropChancePercent;

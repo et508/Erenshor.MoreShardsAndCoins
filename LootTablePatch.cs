@@ -9,7 +9,7 @@ public class LootTable_InitLootTable_Patch
     static void Postfix(LootTable __instance)
     {
         var stats = __instance.GetComponent<Stats>();
-        if (stats == null || stats.Level > 15)
+        if (stats == null || stats.Level < 16)
             return;
 
         float planarChance = Plugin.GetNormalizedChance(Plugin.PlanarShardDropChancePercent);
